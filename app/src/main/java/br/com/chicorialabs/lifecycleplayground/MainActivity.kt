@@ -1,18 +1,25 @@
 package br.com.chicorialabs.lifecycleplayground
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
+import br.com.chicorialabs.lifecycleplayground.databinding.ActivityMainBinding
 
 const val TAG = "lifecycle_playground"
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        android.util.Log.i(TAG, "CREATE: estou criando a tela")
-//        finish()
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        Log.i(TAG, "CREATE: estou criando a tela")
+
+        val markdownView = binding.mainMdView;
+        markdownView.loadMarkdownFromAssets("lifecycle_playground.md")
+
     }
 
     override fun onStart() {
