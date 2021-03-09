@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Lifecycle Playground</string>
+    <string name="instrucoes">## Lifecycle Playground\n
+\n
+Conecte o dispositivo ao computador pelo USB, em modo desenvolvedor, ou execute no emulador. Fique de olho no logcat, com a tag *lifecycle_playground* e categoria *Info*
+\n
+Experimente:
+\n
+- Rotacionar o dispositivo
+- Atender uma chamada telefônica
+- Receber um SMS
+- Alternar para a Home e de volta para o App
+- Ativar a câmera e depois voltar para o App
+- Encerrar o App e abri-lo novamente...
+\n
+Divirta-se!
+\n
+</string>
+</resources>
